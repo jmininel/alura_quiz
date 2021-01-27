@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
           <meta property="og:url" content="https://alura-quiz-git-main.jmininel.vercel.app/" />
           <meta property="og:title" content="The legendo of Zelda" />
           <meta property="og:description" content="Quiz " />
-          <meta property="og:image" content="{db.bg}" />
+          <meta property="og:image" content="https://wallpapercave.com/wp/wp4662809.jpg" />
 
       </Head>
          <ThemeProvider theme={theme}>
