@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import db from '../db.json';
+import Head from 'next/head';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -31,10 +32,23 @@ const theme = db.theme;
 export default function App({ Component, pageProps }) {
   return (
     <>
-       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Head>
+         <link rel="preconnect" href="https://fonts.gstatic.com" />
+         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"></link>
+      
+          <title>The legendo of Zelda</title>
+                 
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://alura-quiz-git-main.jmininel.vercel.app/" />
+          <meta property="og:title" content="The legendo of Zelda" />
+          <meta property="og:description" content="Quiz " />
+          <meta property="og:image" content="{db.bg}" />
+
+      </Head>
+         <ThemeProvider theme={theme}>
+            <GlobalStyle />
+             <Component {...pageProps} />
+         </ThemeProvider>
     </>
   )
 }
