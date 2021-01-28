@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Head from 'next/head'
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -33,6 +33,26 @@ export default function Home() {
   const [name, setName] = React.useState('');
 
   return (
+    <>
+       <Head>
+        <title>Quiz THE LEGEND OF ZELDA!!</title>
+        <meta name="title" content="SUPER MARIO!!" />
+        <meta name="description" content="Teste seus conhecimentos nerds!!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Quiz SUPER MARIO!" />
+        <meta property="og:description" content="Teste seus conhecimentos nerds!!" />
+        <meta property="og:image" content="https://i.pinimg.com/originals/55/14/0a/55140a98c3ee41b7de44f7f89cdb98c5.jpg" />
+        <meta property="og:image:secure_url" content="https://i.pinimg.com/originals/55/14/0a/55140a98c3ee41b7de44f7f89cdb98c5.jpg" />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:image:alt" content="SUPER MARIO S2" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://i.pinimg.com/originals/55/14/0a/55140a98c3ee41b7de44f7f89cdb98c5.jpg" />
+        <meta property="twitter:title" content="Quiz SUPER MARIO" />
+        <meta property="twitter:description" content="Teste seus conhecimentos com o bando de loucos" />
+        <meta property="twitter:image" content="https://i.pinimg.com/originals/55/14/0a/55140a98c3ee41b7de44f7f89cdb98c5.jpg" />
+      </Head>
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Quiz The Legend of Zelda</title>
@@ -74,6 +94,6 @@ export default function Home() {
      </QuizContainer>
      <GitHubCorner projectUrl="https://github.com/jmininel" />
     </QuizBackground>
-
+  </>
   );
 }
