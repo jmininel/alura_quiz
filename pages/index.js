@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
 import Head from 'next/head'
+import { useRouter } from 'next/router';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -9,6 +9,8 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 // const BackgroundImage = styled.div`
 // background-image: url(${db.bg});
@@ -35,7 +37,7 @@ export default function Home() {
   return (
     <>
        <Head>
-        <title>Quiz THE LEGEND OF ZELDA!!</title>
+        <title>Quiz Super Mario!!</title>
         <meta name="title" content="SUPER MARIO!!" />
         <meta name="description" content="Teste seus conhecimentos nerds!!" />
         <meta property="og:type" content="website" />
@@ -50,12 +52,12 @@ export default function Home() {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://i.pinimg.com/originals/55/14/0a/55140a98c3ee41b7de44f7f89cdb98c5.jpg" />
         <meta property="twitter:title" content="Quiz SUPER MARIO" />
-        <meta property="twitter:description" content="Teste seus conhecimentos com o bando de loucos" />
+        <meta property="twitter:description" content="Teste seus conhecimentos nerds!!" />
         <meta property="twitter:image" content="https://i.pinimg.com/originals/55/14/0a/55140a98c3ee41b7de44f7f89cdb98c5.jpg" />
       </Head>
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>Quiz The Legend of Zelda</title>
+        <title>Quiz Super Mario</title>
       </Head>
      <QuizContainer>
        <QuizLogo />
@@ -69,17 +71,15 @@ export default function Home() {
                        router.push(`/quiz?name=${name}`);
                   }}
                   >
-                 <input
-                   onChange={function(infosDoEvento) { 
-                     console.log(infosDoEvento.target.value)
-                   //  name = infosDoEvento.target.value;
-                    setName(infosDoEvento.target.value);
-                   }}
-
-                   placeholder="Escreve ai seu nome!!" />
-                 <button type="submit" disabled={name.length === 0 }>
-                   Jogar {name}
-                 </button>
+                   <Input
+                name="nomeDoUsuario"
+                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
+                placeholder="Diz ai seu nome"
+                value={name}
+              />
+                 <Button type="submit" disabled={name.length === 0 }>
+                   {`Jogar ${name}`}
+                 </Button>
                  </form>
                </Widget.Content>
       </Widget>

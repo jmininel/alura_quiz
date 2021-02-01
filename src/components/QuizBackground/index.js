@@ -11,7 +11,7 @@ const QuizBackground = styled.div`
     background-image: none;
     &:after {
       content: "";
-      background-size: cover;
+    background-size: cover;
     background-position: center;
       background-image:
         linear-gradient(transparent, ${({ theme }) => theme.colors.mainBg}),
