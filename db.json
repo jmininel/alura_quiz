@@ -5,24 +5,26 @@
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "title": "Qual o nome do criado do Super Mario?",
         "description": "Essa é pra aquecer",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Shizuka Kobayashi",
+          "Takeshi Takahashi",
+          "Shigeru Miyamoto",
+          "Yusuke Urameshi"
         ]
       },
       {
         "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
+        "title": "A primeira aparição de Mario foi em qual game?",
         "description": "Faz tempo em haha",
-        "answer": 0,
+        "answer": 3,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Kirb",
+           "The Legend of Zelda",
+           "Super Bomberman",
+           "Donkey Kong"
         ]
       }
     ],
